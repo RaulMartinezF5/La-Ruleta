@@ -37,4 +37,16 @@ function sendForm(e) {
 
 function addParticipant() {
     listParticipants.push({...objParticipant});
+    cleanObjetParticipant();
+    form.reset(); 
+    // Falta añadir la funcion mostrar participantes
+}
+function cleanObjetParticipant() {
+    objParticipant.id = " ";
+    objParticipant.name = " ";
+    objParticipant.desactivate = " ";
+}
+
+function deleteParticipants(id) {
+    listParticipants = listParticipants.filter(participants => participants.id !== id);
 }
