@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hot wheel</title>
-  </head>
-  <body>
-    <header>
-      <img src="" alt="Header image">
-    </header>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hot wheel</title>
+</head>
+
+<body>
+  <header>
+    <img src="" alt="Header image">
+  </header>
+  <main>
     <section id="wheel-container">
       <div id="scroll-button"></div>
       <div id="wheel"></div>
@@ -18,17 +21,25 @@
         <div id="winner"></div>
       </div>
     </section>
+
+
     <section id="forms-container">
-      <div class="form" id="add-section">
-        <input type="text" name="add-participante" value="Nombre">
-      </div>
-      <div class="form" id="list-section">
-        <input type="text" name="participant-list" value="Nombre">
+      <form id="add-section" action="#">
+        <h2>Add Participant</h2>
+        <input type="text" name="add-participant" value="Nombre">
+        <button id="add-button" type="submit">like</button>
+      </form>
+      <div id="displaylist">
+        <h2>List of Participants</h2>
+        <div id="list-section"></div>
       </div>
     </section>
-    <footer>
-      &copy; Copyright 2022 HotWheels
-    </footer>
 
-  </body>
+  </main>
+  <footer>
+    &copy; Copyright 2022 HotWheels
+  </footer>
+
+</body>
+
 </html>
