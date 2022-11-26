@@ -25,6 +25,7 @@ function sendForm(e) {
     }
 
     if(edit) {
+        editParticipants();
         edit = false;
     } else {
         objParticipant.id = Date.now();
@@ -49,4 +50,19 @@ function cleanObjetParticipant() {
 
 function deleteParticipants(id) {
     listParticipants = listParticipants.filter(participants => participants.id !== id);
+}
+
+function editParticipants(){
+    objParticipant.name = nameInput.value;
+  
+    listParticipants.map( participants =>{
+        if(participants.id === objParticipant.id){
+            participants.id = objParticipant.id;
+            participants.name = objParticipant.name;
+            participants.desactivate = objParticipant.desactivate;
+        }
+
+    });
+
+    cleanObjetParticipant();
 }
