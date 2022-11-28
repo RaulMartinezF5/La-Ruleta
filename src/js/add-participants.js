@@ -8,7 +8,6 @@ const objParticipant = {
 
 let edit = false;
 
-
 const form = document.querySelector('#add-section');
 const nameInput = document.querySelector('#add-participant');
 // const desactivateInput = document.querySelector('#');
@@ -18,6 +17,7 @@ form.addEventListener('submit', sendForm);
 
 function sendForm(e) {
     e.preventDefault();
+
     if (nameInput.value === "") {
         alert("Debe introducitr un nombre.");
         return;
@@ -32,7 +32,6 @@ function sendForm(e) {
         objParticipant.desactivate = false;
         addParticipant();
     }
-
 }
 
 function addParticipant() {
@@ -47,7 +46,6 @@ function showParticipants() {
     const divParticipants = document.querySelector("#list-section");
 
     listParticipants.forEach(participant => {
-
         const { id, name, desactivate } = participant;
         const parraph = document.createElement("p")
         parraph.textContent = `${name}`;
@@ -67,14 +65,13 @@ function showParticipants() {
         desactivateButton.textContent = "Desactivate";
         parraph.append(desactivateButton);
 
-
         divParticipants.appendChild(parraph);
     });
 }
 
 function cleanHtml() {
     const divParticipants = document.querySelector("#list-section");
-    while(divParticipants.firstChild){
+    while (divParticipants.firstChild) {
         divParticipants.removeChild(divParticipants.firstChild);
     }
 }
@@ -86,37 +83,31 @@ function cleanObjetParticipant() {
 }
 
 function desactivateParticipant(id) {
-   listParticipants.forEach(participants => {
-    if (participants.id == id) {
-    if (participants.desactivate == false) {
-        participants.desactivate = true; 
-        console.log(participants.desactivate);
-        return;   
-    }
-    participants.desactivate = false;
-    console.log(participants.desactivate);
-    }
-    
-   });
-  
+    listParticipants.forEach(participants => {
+        if (participants.id == id) {
+            if (participants.desactivate == false) {
+                participants.desactivate = true;
+                return;
+            }
+            participants.desactivate = false;
+        }
+    });
 }
 
 function deleteParticipants(id) {
     listParticipants = listParticipants.filter(participants => participants.id !== id);
-        showParticipants();
-    
+    showParticipants();
 }
 
-function editParticipants(){
+function editParticipants() {
     objParticipant.name = nameInput.value;
-  
-    listParticipants.map( participants =>{
-        if(participants.id === objParticipant.id){
+
+    listParticipants.map(participants => {
+        if (participants.id === objParticipant.id) {
             participants.id = objParticipant.id;
             participants.name = objParticipant.name;
             participants.desactivate = objParticipant.desactivate;
         }
-
     });
 
     cleanObjetParticipant();
