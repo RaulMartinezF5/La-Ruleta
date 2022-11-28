@@ -9,22 +9,21 @@ const objParticipant = {
 let edit = false;
 
 
-const form = document.querySelector('#');
-const nameInput = document.querySelector('#');
-const desactivateInput = document.querySelector('#');
-const buttonAdd = document.querySelector('#');
+const form = document.querySelector('#add-section');
+const nameInput = document.querySelector('#add-participant');
+// const desactivateInput = document.querySelector('#');
+const buttonAdd = document.querySelector('#add-button');
 
 form.addEventListener('submit', sendForm);
 
 function sendForm(e) {
     e.preventDefault();
-    
-    if(nameInput === "") {
+    if (nameInput.value === "") {
         alert("Debe introducitr un nombre.");
         return;
     }
 
-    if(edit) {
+    if (edit) {
         edit = false;
     } else {
         objParticipant.id = Date.now();
@@ -36,11 +35,44 @@ function sendForm(e) {
 }
 
 function addParticipant() {
-    listParticipants.push({...objParticipant});
+    listParticipants.push({ ...objParticipant });
     cleanObjetParticipant();
-    form.reset(); 
-    // Falta añadir la funcion mostrar participantes
+    form.reset();
+    console.log(listParticipants);
+    showParticipants();
 }
+
+function showParticipants() {
+    cleanHtml();
+    const divParticipants = document.querySelector("#list-section");
+
+    listParticipants.forEach(participant => {
+
+        const { id, name, desactivate } = participant;
+        const parraph = document.createElement("p")
+        parraph.textContent = `${name}`;
+        parraph.dataset.id = id;
+
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        parraph.append(editButton);
+
+        const deleteButton = document.createElement("button");
+        deleteButton.onclick = () => deleteParticipants(id);
+        deleteButton.textContent = "Delete";
+        parraph.append(deleteButton);
+
+        divParticipants.appendChild(parraph);
+    });
+}
+
+function cleanHtml() {
+    const divParticipants = document.querySelector("#list-section");
+    while(divParticipants.firstChild){
+        divParticipants.removeChild(divParticipants.firstChild);
+    }
+}
+
 function cleanObjetParticipant() {
     objParticipant.id = " ";
     objParticipant.name = " ";
@@ -49,4 +81,6 @@ function cleanObjetParticipant() {
 
 function deleteParticipants(id) {
     listParticipants = listParticipants.filter(participants => participants.id !== id);
+        showParticipants();
+    
 }
