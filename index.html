@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hot wheel</title>
+</head>
+
+<body>
+  <header>
+    <img src="" alt="Header image">
+    <button id="scroll-button"><a href="#forms-container">List Section</a></button>
+  </header>
+  <main>
+    <section id="wheel-container">
+      <div id="wheel"></div>
+      <div id="winners-container">
+        <h2 id="show-winner"></h2>
+        <p id="winner"></p>
+      </div>
+    </section>
+
+    <section id="forms-container">
+      <form id="add-section" action="#">
+        <h2>Add Participant</h2>
+        <input type="text" name="add-participant" value="" placeholder="Name">
+        <button id="add-button" type="submit">like</button>
+      </form>
+      <div id="displaylist">
+        <h2>List of Participants</h2>
+        <div id="list-section"></div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    &copy; Copyright 2022 HotWheels
+  </footer>
+
+</body>
+
 </html>
