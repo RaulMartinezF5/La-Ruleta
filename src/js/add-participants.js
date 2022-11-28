@@ -62,6 +62,12 @@ function showParticipants() {
         deleteButton.textContent = "Delete";
         parraph.append(deleteButton);
 
+        const desactivateButton = document.createElement("button");
+        desactivateButton.onclick = () => desactivateParticipant(id);
+        desactivateButton.textContent = "Desactivate";
+        parraph.append(desactivateButton);
+
+
         divParticipants.appendChild(parraph);
     });
 }
@@ -77,6 +83,22 @@ function cleanObjetParticipant() {
     objParticipant.id = " ";
     objParticipant.name = " ";
     objParticipant.desactivate = " ";
+}
+
+function desactivateParticipant(id) {
+   listParticipants.forEach(participants => {
+    if (participants.id == id) {
+    if (participants.desactivate == false) {
+        participants.desactivate = true; 
+        console.log(participants.desactivate);
+        return;   
+    }
+    participants.desactivate = false;
+    console.log(participants.desactivate);
+    }
+    
+   });
+  
 }
 
 function deleteParticipants(id) {
