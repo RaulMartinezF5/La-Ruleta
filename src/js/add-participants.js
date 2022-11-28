@@ -62,6 +62,12 @@ function showParticipants() {
         deleteButton.textContent = "Delete";
         parraph.append(deleteButton);
 
+
+        const desactivateButton = document.createElement("button");
+        desactivateButton.onclick = () => desactivateParticipants(id);
+        desactivateButton.textContent = "Desactivate";
+        parraph.append(desactivateButtonn);
+
         divParticipants.appendChild(parraph);
     });
 }
@@ -82,6 +88,11 @@ function cleanObjetParticipant() {
 function deleteParticipants(id) {
     listParticipants = listParticipants.filter(participants => participants.id !== id);
         showParticipants();
+    
+}
+
+function desactivateParticipants(id) {
+    console.log(objParticipants.id);
     
 }
 
