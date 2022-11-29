@@ -52,18 +52,45 @@ function showParticipants() {
         parraph.dataset.id = id;
 
         const editButton = document.createElement("button");
+        editButton.onclick = () => editParticipants(id);
+        editButton.setAttribute('name',id);
         editButton.textContent = "Edit";
         parraph.append(editButton);
+       
+       
 
         const deleteButton = document.createElement("button");
         deleteButton.onclick = () => deleteParticipants(id);
+        deleteButton.setAttribute('name',id);
         deleteButton.textContent = "Delete";
         parraph.append(deleteButton);
 
         const desactivateButton = document.createElement("button");
         desactivateButton.onclick = () => desactivateParticipant(id);
+        desactivateButton.setAttribute('name',id);
         desactivateButton.textContent = "Desactivate";
         parraph.append(desactivateButton);
+
+
+        const updateInput = document.createElement("input");
+        updateInput.setAttribute('id',id);
+        updateInput.classList.add('invisible');
+        updateInput.setAttribute("value",name);
+        updateInput.setAttribute("name",name);
+        parraph.append(updateInput);
+
+        const updateButton = document.createElement("button");
+        updateButton.onclick = () => updateParticipants(id,name);
+        updateButton.textContent = "Update";
+        updateButton.setAttribute("name",name);
+        parraph.append(updateButton);
+
+        const cancelButton = document.createElement("button");
+        cancelButton.onclick = () => cancelParticipants(id,name);
+        cancelButton.textContent = "Cancel";
+        cancelButton.setAttribute("name",name);
+        parraph.append(cancelButton);
+
 
         divParticipants.appendChild(parraph);
     });
@@ -99,7 +126,7 @@ function deleteParticipants(id) {
     showParticipants();
 }
 
-function editParticipants() {
+function updateParticipants() {
     objParticipant.name = nameInput.value;
 
     listParticipants.map(participants => {
@@ -111,4 +138,35 @@ function editParticipants() {
     });
 
     cleanObjetParticipant();
+}
+
+
+function editParticipants(id, name) {
+
+        const allBtnPrimary = document.getElementsByName(id);
+        allBtnPrimary.forEach(element => {
+            element.style.display = 'none';
+        });
+
+        const allBtnSecondary = document.getElementsByName(name);
+        allBtnSecondary.forEach(element => {
+            element.style.display = 'inline';
+        });
+      
+    
+}
+
+function cancelParticipants(id, name) {
+
+    const allBtnPrimary = document.getElementsByName(id);
+    allBtnPrimary.forEach(element => {
+        element.style.display = 'inline';
+    });
+
+    const allBtnSecondary = document.getElementsByName(name);
+    allBtnSecondary.forEach(element => {
+        element.style.display = 'none';
+    });
+  
+
 }
