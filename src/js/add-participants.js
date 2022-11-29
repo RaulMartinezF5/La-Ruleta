@@ -81,12 +81,15 @@ function showParticipants() {
 
         const updateButton = document.createElement("button");
         updateButton.onclick = () => updateParticipants(id,name);
+        updateButton.classList.add('invisible');
         updateButton.textContent = "Update";
         updateButton.setAttribute("name",name);
         parraph.append(updateButton);
 
         const cancelButton = document.createElement("button");
         cancelButton.onclick = () => cancelParticipants(id,name);
+        cancelButton.classList.add('invisible');
+
         cancelButton.textContent = "Cancel";
         cancelButton.setAttribute("name",name);
         parraph.append(cancelButton);
@@ -152,7 +155,8 @@ function editParticipants(id, name) {
         allBtnSecondary.forEach(element => {
             element.style.display = 'inline';
         });
-      
+console.log(allBtnPrimary)
+console.log(allBtnSecondary)      
     
 }
 
@@ -167,6 +171,8 @@ function cancelParticipants(id, name) {
     allBtnSecondary.forEach(element => {
         element.style.display = 'none';
     });
-  
+    console.log(allBtnPrimary)
+    console.log(allBtnSecondary)      
+      
 
 }
