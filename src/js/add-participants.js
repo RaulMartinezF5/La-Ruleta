@@ -52,7 +52,7 @@ function showParticipants() {
         parraph.dataset.id = id;
 
         const editButton = document.createElement("button");
-        editButton.onclick = () => editParticipants(id);
+        editButton.onclick = () => editParticipants(id, name);
         editButton.setAttribute('name',id);
         editButton.textContent = "Edit";
         parraph.append(editButton);
@@ -80,7 +80,7 @@ function showParticipants() {
         parraph.append(updateInput);
 
         const updateButton = document.createElement("button");
-        updateButton.onclick = () => updateParticipants(id,name);
+        updateButton.onclick = () => updateParticipants(id);
         updateButton.classList.add('invisible');
         updateButton.textContent = "Update";
         updateButton.setAttribute("name",name);
@@ -129,18 +129,21 @@ function deleteParticipants(id) {
     showParticipants();
 }
 
-function updateParticipants() {
-    objParticipant.name = nameInput.value;
-
-    listParticipants.map(participants => {
-        if (participants.id === objParticipant.id) {
-            participants.id = objParticipant.id;
-            participants.name = objParticipant.name;
-            participants.desactivate = objParticipant.desactivate;
+function updateParticipants(id) {
+    const nameUpdate = document.getElementById(id);
+   
+    listParticipants.forEach(participants => {
+      
+        if (participants.id === id) {
+            participants.name = nameUpdate.value;
         }
-    });
 
-    cleanObjetParticipant();
+    });
+   
+    cancelParticipants();
+    cleanHtml();
+    showParticipants();
+
 }
 
 
@@ -155,8 +158,6 @@ function editParticipants(id, name) {
         allBtnSecondary.forEach(element => {
             element.style.display = 'inline';
         });
-console.log(allBtnPrimary)
-console.log(allBtnSecondary)      
     
 }
 
@@ -171,8 +172,5 @@ function cancelParticipants(id, name) {
     allBtnSecondary.forEach(element => {
         element.style.display = 'none';
     });
-    console.log(allBtnPrimary)
-    console.log(allBtnSecondary)      
-      
 
 }
