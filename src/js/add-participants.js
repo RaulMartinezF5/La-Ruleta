@@ -131,19 +131,15 @@ function deleteParticipants(id) {
 
 function updateParticipants(id) {
     const nameUpdate = document.getElementById(id);
-    console.log(nameUpdate);
-
-    objParticipant.name = nameUpdate.value;
-    console.log(objParticipant.name);
-    listParticipants.map(participants => {
-        if (participants.id === objParticipant.id) {
-            participants.id = objParticipant.id;
-            participants.name = objParticipant.name;
-            participants.desactivate = objParticipant.desactivate;
+   
+    listParticipants.forEach(participants => {
+      
+        if (participants.id === id) {
+            participants.name = nameUpdate.value;
         }
 
     });
-    cleanObjetParticipant();
+   
     cancelParticipants();
     cleanHtml();
     showParticipants();
