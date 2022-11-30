@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hot wheel</title>
+  <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 
 <body>
@@ -16,7 +17,11 @@
 
   <main>
     <section id="wheel-container">
-      <div id="wheel"></div>
+      <!-- wheel tag -->
+      <div id='wheel' >
+        <canvas id='canvas' width='1000' height='600'></canvas>
+      </div>
+      
       <div id="winners-container">
         <h2 id="show-winner"></h2>
         <p id="winner"></p>
@@ -41,6 +46,20 @@
   </footer>
 
   <script src="./src/js/add-participants.js"></script>
+  <!-- this wheel -->
+  <script
+    src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+      crossorigin='anonymous'></script>
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/tinysort.min.js'
+      crossorigin='anonymous'></script>
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/jquery.tinysort.min.js'
+      crossorigin='anonymous'></script>  
+    <script src='./src/js/scale.fix.js'></script>
+    <script src='./src/js/wheel.js'></script> 
+
+
 </body>
 
 </html>
