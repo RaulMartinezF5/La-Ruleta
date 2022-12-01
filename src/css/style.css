@@ -1,11 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import "./reset.css";
 @import "./global.css";
-/* @import "./reset.css"; */
+@import "./header.css";
 @import "./participant.css";
-@import "./edit.css";
-@import "./block.css";
-@import "./cancel.css";
-@import "./stylewheel.css";
-/* this stared css full page  */
-
-
-

@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="./src/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hot wheel</title>
   <link rel="stylesheet" href="./src/css/style.css">
@@ -19,10 +18,10 @@
     <button id="scroll-button"><a href="#forms-container"></a></button>
     <section id="wheel-container">
       <!-- wheel tag -->
-     <!--  <div id='wheel' >
+      <!--  <div id='wheel' >
         <canvas id='canvas' width='1000' height='600'></canvas>
       </div> -->
-      
+
       <div id="winners-container">
         <h2 id="show-winner">El ganador es </h2>
         <p id="winner"></p>
@@ -30,12 +29,14 @@
     </section>
 
     <section id="forms-container">
-      <form id="add-section" class="container-style" action="#">
+      <form id="add-section">
         <h2>Add Participant</h2>
-        <input type="text" id="add-participant" name="add-participant" value="" placeholder="Name">
-        <button id="add-button" class="add" type="submit">Add participant</button>
+        <fieldset id="input-participant">
+          <input type="text" id="add-participant" name="add-participant" value="" placeholder="Name">
+          <button id="add-button" class="add" type="submit">Add participant</button>
+        </fieldset>
       </form>
-      <div id="displaylist" class="container-column">
+      <div id="displaylist">
         <h2>List of Participants</h2>
         <div id="list-section">
         </div>
@@ -49,7 +50,7 @@
 
   <script src="./src/js/add-participants.js"></script>
   <!-- this wheel -->
-  <script
+  <!-- <script
     src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
       crossorigin='anonymous'></script>
     <script
@@ -59,9 +60,7 @@
       src='https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.3.6/jquery.tinysort.min.js'
       crossorigin='anonymous'></script>  
     <script src='./src/js/scale.fix.js'></script>
-    <script src='./src/js/wheel.js'></script> 
-
-
+    <script src='./src/js/wheel.js'></script>  -->
 </body>
 
 </html>

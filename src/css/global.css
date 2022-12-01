@@ -1,20 +1,23 @@
-body{
+html{
+  scroll-behavior:smooth;
+}
+
+body {
   width: 360px;
   margin: auto;
-
+  font-family: Montserrat, sans-serif;
 }
-img{
+
+img {
     width: 100%;
-   
-
 }
 
-#display-conteiner{
-  display: flex;
-  flex-direction: column;
-}
-
-#container-style{
-  display: flex;
-  flex-direction: row;
+input[type="text"],
+input[type="text"]:focus {
+  border: 2px solid #F67779;
+  height: 32px;
+  font-size: 16px;
+  background: #FDF4CB;
+  border-radius: 20px;
+  padding: 0 0 0 8px;
 }

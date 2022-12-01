@@ -1,29 +1,71 @@
-button{
-    padding: 0 ;
-    border-width: 0px;
-     border-style: none;  
+#forms-container {
+    margin: 100px 0 0 0;
+}
+
+#add-section,
+#displaylist {
+    display: block;
+    border: 3px solid #F67779;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+#add-section h2,
+#displaylist h2 {
+    padding: 8px;
+    display: inline-block;
+    background: #000;
+    color: white;
+    font-size: 16px;
+}
+
+#input-participant {
+    display: flex;
+    justify-content: space-between;
+}
+
+#input-participant input[type="text"] {
+    width: 250px;
+}
+
+.list-item {
+    display: grid;
+    grid-column: 1fr 32px 32px 32px;
+    gap: 8px;
+    margin-bottom: 36px;
+}
+
+.list-item p {
+    width: 100%;
+}
+
+button {
     border-radius: 5px;
     display: block;
     width: 32px;
     height: 32px;
     text-indent: -10000px;
-
+    cursor: pointer;
 }
 
-.add{
+.add {
     background-image: url(../img/botón\ añadir\ usuarios.png);
 }
 
-.delete{
+.delete {
     background-image: url(../img/eliminar\ participante.png);
 }
 
-.edit{
+.edit {
     background-image: url(../img/botón\ editar\ usuarios.png);
 }
 
-.desactivate{
+.desactivate {
     background-image: url(../img/botón\ bloquear\ usuario.png);
+}
+
+.cancel {
+    background: url(../img/botón\ no\ editar\ usuarios.png);
 }
 
 #list-section div {
@@ -34,8 +76,6 @@ button{
     display: none;
 }
 
-#list-section div visible {
+#list-section div .visible {
     display: inline;
 }
-
-
