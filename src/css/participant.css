@@ -6,7 +6,36 @@ button{
     display: block;
     width: 32px;
     height: 32px;
-    text-indent: -1000px;
-    background-color: brown;
+    text-indent: -10000px;
 
 }
+
+.add{
+    background-image: url(../img/botón\ añadir\ usuarios.png);
+}
+
+.delete{
+    background-image: url(../img/eliminar\ participante.png);
+}
+
+.edit{
+    background-image: url(../img/botón\ editar\ usuarios.png);
+}
+
+.desactivate{
+    background-image: url(../img/botón\ bloquear\ usuario.png);
+}
+
+#list-section div {
+    display: flex;
+}
+
+#list-section div .invisible {
+    display: none;
+}
+
+#list-section div visible {
+    display: inline;
+}
+
+

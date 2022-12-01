@@ -1,10 +1,10 @@
 @import "./global.css";
 /* @import "./reset.css"; */
-/* @import "./participant.css"; */
+@import "./participant.css";
 @import "./edit.css";
-/* @import "./block.css"; */
-/* @import "./cancel.css"; */
-/* @import "./stylewheel.css"; */
+@import "./block.css";
+@import "./cancel.css";
+@import "./stylewheel.css";
 /* this stared css full page  */
 
 

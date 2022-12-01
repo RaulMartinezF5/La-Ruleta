@@ -15,5 +15,6 @@ img{
 }
 
 #container-style{
-  
+  display: flex;
+  flex-direction: row;
 }
