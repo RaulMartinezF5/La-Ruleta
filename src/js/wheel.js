@@ -1,24 +1,3 @@
-var students = [
-  {name: 'Alfred'},
-  {name: 'Angel'},
-  {name: 'Asma'},
-  {name: 'Aswad'},
-  {name: 'Chris Carpio'},
-  {name: 'Chris Gomez'},
-  {name: 'David'},
-  {name: 'Edgar'},
-  {name: 'Eyerin'},
-  {name: 'Ian'},
-  {name: 'Jereny'},
-  {name: 'Joshua'},
-  {name: 'Mac'},
-  {name: 'Meylan'},
-  {name: 'Nestasia'},
-  {name: 'Randy'},
-  {name: 'Rashamel'},
-  {name: 'Sidney'}
-];
-
 var shuffle = function (o) {
   for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
   return o;
@@ -40,8 +19,8 @@ var mod = function (a, b) {
 };
 
 $(function () {
-  var studentContainer = $('#students ul');
-  students.forEach(function (student) {
+  var studentContainer = $('#listParticipants ul');
+  listParticipants.forEach(function (student) {
     var name = student.name;
     studentContainer.append(
       $(document.createElement('li')).append(
@@ -72,12 +51,12 @@ $(function () {
         }).text(name)));
   });
 
-  $('#students ul>li').tsort('input', {
+  $('#listParticipants ul>li').tsort('input', {
     attr: 'value'
   });
 
   var segments = [];
-  $.each($('#students input:checked'), function (key, cbox) {
+  $.each($('#listParticipants input:checked'), function (key, cbox) {
     segments.push(cbox.value);
   });
 
@@ -106,7 +85,7 @@ var wheel = {
   spinStart: 0,
   timerDelay: 33,
   timerHandle: 0,
-  upTime: 100,
+  upTime: 1000,
 
   spin: function () {
     // Start the wheel only if it's not already spinning
@@ -139,7 +118,7 @@ var wheel = {
 
     wheel.angleCurrent += wheel.angleDelta;
     while (wheel.angleCurrent >= Math.PI * 2)
-      
+      // Keep the angle in a reasonable range
       wheel.angleCurrent -= Math.PI * 2;
 
     if (finished) {
