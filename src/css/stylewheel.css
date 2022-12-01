@@ -1,3 +1,4 @@
+/*
 @font-face {
   font-family: 'Noto Sans';
   font-weight: 400;
@@ -53,7 +54,7 @@
        url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf') format('truetype'),
        url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans') format('svg');
 }
- 
+ */
 body {
 
   padding:50px;
