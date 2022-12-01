@@ -136,19 +136,15 @@ function deleteParticipants(id) {
     );
     showParticipants();
 }
-
-function updateParticipants() {
-    objParticipant.name = nameInput.value;
-
-    listParticipants.map((participants) => {
-        if (participants.id === objParticipant.id) {
-            participants.id = objParticipant.id;
-            participants.name = objParticipant.name;
-            participants.desactivate = objParticipant.desactivate;
+function updateParticipants(id, name) {
+    const nameUpdate = document.getElementById(id);
+    listParticipants.forEach(participants => {
+        if (participants.id === id) {
+            participants.name = nameUpdate.value;
         }
     });
-
     cleanObjetParticipant();
+    showParticipants();
 }
 
 function editParticipants(id, name) {

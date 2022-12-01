@@ -12,6 +12,11 @@
     width: 32px;
     height: 32px;
     cursor: pointer;
+    transition: all 0.4s;
+}
+
+#scroll-button:hover {
+    transform: scale(1.2);
 }
 
 #scroll-button a {
