@@ -1,3 +1,8 @@
-@import "./header.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
 @import "./reset.css";
-@import "./stylewheel.css";
+@import "./global.css";
+@import "./header.css";
+@import "./main.css";
+@import "./participant.css";
+@import "./footer.css";

@@ -1,11 +1,26 @@
-
+#header-img {  
+    display: block;
+    width:100%;
+}
 
 #scroll-button {
-    padding: 0 ;
-    border-width: 0px;
-    border-style: none;
-    
+    margin-top: 12px;
+    margin-left: 12px;
+    border-radius: 5px;
+    background-image: url(../img/botón\ sección\ usuarios.png);
+    display: block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: all 0.4s;
 }
-#scroll-button img {
-    border-radius: 20%;
+
+#scroll-button:hover {
+    transform: scale(1.2);
+}
+
+#scroll-button a {
+    display: block;
+    width: 32px;
+    height: 32px;
 }
