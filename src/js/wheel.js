@@ -184,7 +184,7 @@ var wheel = {
 
   clear: function () {
     var ctx = wheel.canvasContext;
-    ctx.clearRect(0, 0, 1000, 800);
+    ctx.clearRect(0, 0, 360, 360);
   },
 
   drawNeedle: function () {
@@ -209,16 +209,19 @@ var wheel = {
 
     // Which segment is being pointed to?
     var i = wheel.segments.length - Math.floor((wheel.angleCurrent / (Math.PI * 2)) * wheel.segments.length) - 1;
+    const winnerParticipant = document.getElementById("winner");
+    winnerParticipant.innerHTML = wheel.segments[i];
 
     // Now draw the winning name
-    ctx.textAlign = 'left';
+/*  ctx.textAlign = 'left';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = '#000000';
     ctx.font = '2em Arial';
     ctx.fillText(wheel.segments[i], centerX + size + 25, centerY);
+    */
   },
-
-  drawSegment: function (key, lastAngle, angle) {
+  
+    drawSegment: function (key, lastAngle, angle) {
     var ctx = wheel.canvasContext;
     var centerX = wheel.centerX;
     var centerY = wheel.centerY;
