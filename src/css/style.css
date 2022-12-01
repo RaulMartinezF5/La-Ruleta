@@ -1,7 +1,9 @@
 @import "./global.css";
-@import "./header.css";
-@import "./reset.css";
-@import "./participant.css";
+/* @import "./reset.css"; */
+/* @import "./participant.css"; */
+@import "./edit.css";
+/* @import "./block.css"; */
+/* @import "./cancel.css"; */
 /* @import "./stylewheel.css"; */
 /* this stared css full page  */
 

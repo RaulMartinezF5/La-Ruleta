@@ -1,0 +1,13 @@
+button{
+    padding: 0 ;
+    border-width: 0px;
+     border-style: none;  
+    border-radius: 5px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-indent: -1000px;
+    background-color:#F67779;
+    background-image: url(../img/eliminar\ participante.png);
+
+}

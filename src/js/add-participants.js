@@ -48,6 +48,9 @@ function showParticipants() {
     listParticipants.forEach(participant => {
         const { id, name, desactivate } = participant;
         const parraph = document.createElement("p")
+        parraph.classList.add("display-container");
+        
+
         parraph.textContent = `${name}`;
         parraph.dataset.id = id;
 
