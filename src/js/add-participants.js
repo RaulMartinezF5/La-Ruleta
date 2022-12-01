@@ -1,8 +1,4 @@
-let listParticipants = [
-    { id: "123456", name: "Johnny", desactivated: false },
-    { id: "123457", name: "Patata", desactivated: false },
-    { id: "123458", name: "Cebolla", desactivated: false }
-];
+let listParticipants = [];
 
 const objParticipant = {
     id: '',
@@ -14,7 +10,6 @@ let edit = false;
 
 const form = document.querySelector('#add-section');
 const nameInput = document.querySelector('#add-participant');
-// const desactivateInput = document.querySelector('#');
 const buttonAdd = document.querySelector('#add-button');
 
 form.addEventListener('submit', sendForm);
@@ -82,7 +77,6 @@ function showParticipants() {
         desactivateButton.textContent = "Desactivate";
         parraph.append(desactivateButton);
 
-
         const updateInput = document.createElement("input");
         updateInput.setAttribute('id', id);
         updateInput.classList.add('invisible');
@@ -104,7 +98,6 @@ function showParticipants() {
         cancelButton.textContent = "Cancel";
         cancelButton.setAttribute("name", name);
         parraph.append(cancelButton);
-
 
         divParticipants.appendChild(parraph);
     });
@@ -136,6 +129,7 @@ function desactivateParticipant(id) {
 }
 
 function deleteParticipants(id, name) {
+    if(confirm(`You are going to eliminate ${name}.\nDo you want to continue?`)) {
     listParticipants = listParticipants.filter(participants => participants.id !== id);
     var segments = wheel.segments;
     for(let count = 0; count <= segments.length; count++) {
@@ -143,7 +137,10 @@ function deleteParticipants(id, name) {
             segments.splice(count, 1);
         }
     }
+    cleanObjetParticipant();
     updateWheel();
+    showParticipants();
+}
 }
 
 function updateParticipants(id, name) {
