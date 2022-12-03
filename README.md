@@ -5,12 +5,12 @@ El usuario debe tener la opción de ver la lista de los participantes, de añadi
 
 ## PARTES DEL PROYECTO
 ### User flow
-![diagrama](https://user-images.githubusercontent.com/116883797/205452122-906de9e0-2e57-41f0-99e2-97720f1622ab.jpg).  
+![diagrama](https://user-images.githubusercontent.com/116883797/205452122-906de9e0-2e57-41f0-99e2-97720f1622ab.jpg)  
 Segun lo solicitado, desarrollamos un diagrama de flujo mostrando las opciones que tendra el usuario.
 ### *Sketch*, *mockup* y prototipo
 ![Sketch](https://user-images.githubusercontent.com/116883797/205450999-3c3b3679-2afb-4552-b7c7-9ade7d87d82c.png)
 ![Mockup](https://user-images.githubusercontent.com/116883797/205451008-da5e28d7-4b80-429b-a920-b36ab2fbea78.png)
-![Prototipo](https://user-images.githubusercontent.com/116883797/205451148-4319c7ec-8cc6-4489-a71e-f82a9f83abfd.png).  
+![Prototipo](https://user-images.githubusercontent.com/116883797/205451148-4319c7ec-8cc6-4489-a71e-f82a9f83abfd.png)  
 Usando Figma desarrollamos el *sketch*, *mockup* y prototipo de cómo se veria la web para mostrar a quien nos realizo el encargo.
 ### Estructura HTML
 Una vez aprobado el prototipo se desarrollo la estructura HTML necesaria para desarrollar la web.
