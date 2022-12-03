@@ -1,5 +1,7 @@
 # Proyecto Hot Wheel
 ## PROYECTO
+![index-01](https://user-images.githubusercontent.com/116883797/205453416-e12bbbe3-239b-4539-ab50-dd4ee7fbce86.jpg)
+![index-02](https://user-images.githubusercontent.com/116883797/205453421-4bbb1332-23ea-4f53-9694-42294ea1b9e8.jpg)  
 El objetivo de la Hot Wheel es crear un sistema de selección de sacrificios de manera justa y aleatoria para los participantes. 
 El usuario debe tener la opción de ver la lista de los participantes, de añadir un nuevo participante, de borrar un participante y por último la opción de modificar un participante ya añadido. Tiene que poder funcionar en cualquier dispositivo.
 
